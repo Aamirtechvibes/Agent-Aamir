@@ -1,0 +1,29 @@
+{
+  "name": "agent-aamir",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "agent-build": "./index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3.9.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@clack/core": "^1.4.3",
+    "@clack/prompts": "^1.7.0",
+    "@openrouter/ai-sdk-provider": "^3.0.0",
+    "@types/marked-terminal": "^6.1.1",
+    "@types/node": "^26.2.0",
+    "ai": "^7.0.82",
+    "chalk": "^6.0.0",
+    "commander": "^15.0.0",
+    "diff": "^9.0.0",
+    "figlet": "^1.11.4",
+    "marked-terminal": "^7.3.0"
+  }
+}
