@@ -1,6 +1,8 @@
 import clak from "chalk";
 import { select, isCancel } from "@clack/prompts";
 import { runAgentMode } from "./agent/orchestrator.ts";
+import { runAskMode } from "./ask/orchestrator.ts";
+import { runPlanMode } from "./plan/orchestrator.ts";
 
 export async function runCliMode() {
     while (true) {
@@ -26,12 +28,14 @@ export async function runCliMode() {
         }
 
         if (mode === "plan") {
-            console.log(clak.dim("\n Starting Plan Mode \n"));
+            await runPlanMode();
+            //console.log(clak.dim("\n Starting Plan Mode \n"));
             // Implement Plan Mode logic here
         }
         
         if (mode === "ask") {
-            console.log(clak.dim("\n Starting Ask Mode \n"));
+            await runAskMode();
+            //console.log(clak.dim("\n Starting Ask Mode \n"));
             // Implement Ask Mode logic here
         }
 
