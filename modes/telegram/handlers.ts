@@ -1,11 +1,11 @@
 import type { Telegraf } from "telegraf";
 import { isOwner } from "./auth.ts";
 import { WELCOME } from "./constants";
-import { clip, commandArg } from "./text";
-import { runAgent, runAsk, runPlanSteps } from "./agent-run";
+import { clip, commandArg } from "./text.ts";
+import { runAgent, runAsk, runPlanSteps } from "./agent-run.ts";
 import { generatePlan } from "../plan/planner";
-import { planKeyboard, planMessage, planSessions, refreshPlanUi, type PlanSession } from "./plan-session";
-import { approvalDiff, approvalSessions } from "./approval-session";
+import { planKeyboard, planMessage, planSessions, refreshPlanUi, type PlanSession } from "./plan-session.ts";
+import { approvalDiff, approvalSessions } from "./approval-session.ts";
 
 export function registerHandlers(bot: Telegraf) {
     bot.command("start", async (ctx) => {
